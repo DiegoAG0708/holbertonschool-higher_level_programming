@@ -1,3 +1,5 @@
 #!/usr/bin/python3
-str = "Python is an object-oriented programming language with Python"
-print(str[13:40] + str[40:46] + str[:6])
+str = "Holberton School"
+str2 = "object-oriented programming with Python"
+str = str2[:]
+print(str)
