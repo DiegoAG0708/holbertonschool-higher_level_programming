@@ -1,0 +1,1 @@
+in this directory we will look at some of exceptions from data structures
