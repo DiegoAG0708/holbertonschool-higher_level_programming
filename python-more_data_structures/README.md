@@ -1,0 +1,1 @@
+In this directory we will se more about the topic of data structures 
