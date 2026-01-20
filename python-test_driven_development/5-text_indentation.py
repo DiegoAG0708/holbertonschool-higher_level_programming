@@ -18,25 +18,28 @@ def text_indentation(text):
         raise TypeError("text must be a string")
 
     seps = {'.', '?', ':'}
-    buffer = ""
+    segment = ""
     i = 0
     n = len(text)
 
     while i < n:
         ch = text[i]
-        buffer += ch
         if ch in seps:
-            # Print segment followed by a blank line (2 newlines total)
-            print(buffer.strip())
+            # Print segment trimmed, then the separator, then a blank line
+            line = segment.strip() + ch
+            print(line)
             print()
-            buffer = ""
+            segment = ""
             i += 1
             # Skip spaces immediately after a separator
             while i < n and text[i] == ' ':
                 i += 1
             continue
-        i += 1
+        else:
+            segment += ch
+            i += 1
 
     # Print any remaining text without trailing newline
-    if buffer.strip() != "":
-        print(buffer.strip(), end="")
+    tail = segment.strip()
+    if tail != "":
+        print(tail, end="")

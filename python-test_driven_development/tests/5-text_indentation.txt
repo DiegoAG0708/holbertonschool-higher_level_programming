@@ -20,6 +20,16 @@ How are you:
 <BLANKLINE>
 John
 
+# Trim spaces around separators (fixes 'A .', 'B ?' etc.)
+>>> text_indentation(" A . B ? C : D ")
+A.
+<BLANKLINE>
+B?
+<BLANKLINE>
+C:
+<BLANKLINE>
+D
+
 # Leading/trailing spaces trimmed per printed line
 >>> text_indentation("  A  .   B   ?   C   :   D   ")
 A.
