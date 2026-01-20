@@ -1,16 +1,26 @@
 >>> text_indentation = __import__('5-text_indentation').text_indentation
 
-# Basic behavior with separators
->>> text_indentation("Hello. World? Yes: indeed.")
-Hello.
-<BLANKLINE>
-World?
-<BLANKLINE>
-Yes:
-<BLANKLINE>
-indeed.
+# No separators: prints once, no trailing newline
+>>> text_indentation("Holberton School")
+Holberton School
 
-# Leading/trailing spaces are trimmed per printed line
+# Single separator: blank line after the segment, no trailing newline at end
+>>> text_indentation("Holberton.School")
+Holberton.
+<BLANKLINE>
+School
+
+# Multiple separators and spaces after them
+>>> text_indentation("Holberton. School? How are you: John")
+Holberton.
+<BLANKLINE>
+School?
+<BLANKLINE>
+How are you:
+<BLANKLINE>
+John
+
+# Leading/trailing spaces trimmed per printed line
 >>> text_indentation("  A  .   B   ?   C   :   D   ")
 A.
 <BLANKLINE>
@@ -20,28 +30,8 @@ C:
 <BLANKLINE>
 D
 
-# No separators: prints once, trimmed
->>> text_indentation("   No separators here   ")
-No separators here
-
-# Multiple spaces after separators are skipped
->>> text_indentation("End.   Next?    Then:   Final")
-End.
-<BLANKLINE>
-Next?
-<BLANKLINE>
-Then:
-<BLANKLINE>
-Final
-
-# Mixed content without trailing separator
->>> text_indentation("Alpha beta: gamma delta")
-Alpha beta:
-<BLANKLINE>
-gamma delta
-
 # Type validation
->>> text_indentation(123)
+>>> text_indentation(12)
 Traceback (most recent call last):
     ...
 TypeError: text must be a string

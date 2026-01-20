@@ -17,7 +17,7 @@ def text_indentation(text):
     if not isinstance(text, str):
         raise TypeError("text must be a string")
 
-    separators = {'.', '?', ':'}
+    seps = {'.', '?', ':'}
     buffer = ""
     i = 0
     n = len(text)
@@ -25,8 +25,8 @@ def text_indentation(text):
     while i < n:
         ch = text[i]
         buffer += ch
-        if ch in separators:
-            # Print current segment without leading/trailing spaces
+        if ch in seps:
+            # Print segment followed by a blank line (2 newlines total)
             print(buffer.strip())
             print()
             buffer = ""
@@ -37,6 +37,6 @@ def text_indentation(text):
             continue
         i += 1
 
-    # Print any remaining text (no trailing spaces at ends)
+    # Print any remaining text without trailing newline
     if buffer.strip() != "":
-        print(buffer.strip())
+        print(buffer.strip(), end="")
