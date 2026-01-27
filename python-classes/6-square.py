@@ -31,26 +31,12 @@ class Square:
 
     @property
     def size(self):
-        """
-        Retrieve the size of the square.
-
-        Returns:
-            int: the current size of the square
-        """
+        """Retrieve the size of the square."""
         return self.__size
 
     @size.setter
     def size(self, value):
-        """
-        Set the size of the square with validation.
-
-        Args:
-            value (int): new size of the square
-
-        Raises:
-            TypeError: if value is not an integer
-            ValueError: if value is less than 0
-        """
+        """Set the size of the square with validation."""
         if not isinstance(value, int):
             raise TypeError("size must be an integer")
         if value < 0:
@@ -59,25 +45,12 @@ class Square:
 
     @property
     def position(self):
-        """
-        Retrieve the position of the square.
-
-        Returns:
-            tuple: the current position of the square
-        """
+        """Retrieve the position of the square."""
         return self.__position
 
     @position.setter
     def position(self, value):
-        """
-        Set the position of the square with validation.
-
-        Args:
-            value (tuple): new position of the square
-
-        Raises:
-            TypeError: if value is not a tuple of 2 positive integers
-        """
+        """Set the position of the square with validation."""
         if (
             not isinstance(value, tuple)
             or len(value) != 2
@@ -88,12 +61,7 @@ class Square:
         self.__position = value
 
     def area(self):
-        """
-        Compute and return the area of the square.
-
-        Returns:
-            int: the area of the square
-        """
+        """Compute and return the area of the square."""
         return self.__size * self.__size
 
     def my_print(self):
@@ -106,7 +74,7 @@ class Square:
             print("")
             return
 
-        # Print vertical offset
+        # Print vertical offset (blank lines)
         for _ in range(self.__position[1]):
             print("")
 
