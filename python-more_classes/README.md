@@ -1,0 +1,1 @@
+In this directory we will talk about the Object Oriented Programming and how we first create an oobject and define its attributes and more 
