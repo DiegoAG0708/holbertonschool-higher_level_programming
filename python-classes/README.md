@@ -1,0 +1,1 @@
+In this document we will look at Object oriented programming, which consists in attributes and things they can do.
