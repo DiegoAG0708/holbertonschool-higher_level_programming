@@ -1,0 +1,1 @@
+In this directory we will se the topic of inheritance and how it affects the different classes. 
