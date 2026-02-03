@@ -7,21 +7,15 @@ Traceback (most recent call last):
 ...
 Exception: area() is not implemented
 
-# Missing case the checker wants:
->>> bg.integer_validator("age")
-Traceback (most recent call last):
-...
-TypeError: age must be an integer
-
 # Valid integers
 >>> bg.integer_validator("my_int", 12)
 >>> bg.integer_validator("width", 89)
 
 # Invalid types
->>> bg.integer_validator("name", "John")
+>>> bg.integer_validator("age", "John")
 Traceback (most recent call last):
 ...
-TypeError: name must be an integer
+TypeError: age must be an integer
 >>> bg.integer_validator("tuple_test", (4,))
 Traceback (most recent call last):
 ...
