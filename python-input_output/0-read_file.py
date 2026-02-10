@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Module that defines a function to read a UTF-8 text file
+Module that provides a function to read a UTF-8 text file
 and print its contents to standard output.
 """
 
