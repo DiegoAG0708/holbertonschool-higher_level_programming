@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
-Module that provides a function to read a UTF-8 text file
-and print its contents to standard output.
+This module defines the read_file function.
+It reads a UTF-8 text file and prints its contents to stdout.
 """
 
 def read_file(filename=""):
