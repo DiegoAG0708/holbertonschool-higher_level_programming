@@ -1,0 +1,1 @@
+this directory will talk about python object relational mapping
