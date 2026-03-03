@@ -1,0 +1,1 @@
+This directory will cover more queires of the sq language.
