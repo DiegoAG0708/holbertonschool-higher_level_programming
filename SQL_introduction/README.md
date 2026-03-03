@@ -1,0 +1,1 @@
+This directory wil talk about structured query language and how we use it. 
